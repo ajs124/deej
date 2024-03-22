@@ -1,6 +1,7 @@
 { buildGoApplication
 , pkg-config
-, pcre }:
+, pcre
+, buildType ? "release" }:
 
 buildGoApplication rec {
   pname = "deej";
@@ -18,6 +19,10 @@ buildGoApplication rec {
   ];
 
   subPackages = [ "pkg/deej/cmd" ];
+
+  ldflags = [
+    "-X main.buildType=${buildType}"
+  ];
 
   postInstall = ''
     mv $out/bin/cmd $out/bin/${pname}
