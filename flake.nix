@@ -34,10 +34,6 @@
             graphviz
           ];
           buildInputs = with pkgs; [
-            gtk3
-            libappindicator-gtk3
-            libayatana-appindicator
-            webkitgtk
             pcre
           ];
         };

@@ -1,9 +1,5 @@
 { buildGoApplication
 , pkg-config
-, gtk3
-, libappindicator-gtk3
-, libayatana-appindicator
-, webkitgtk
 , pcre }:
 
 buildGoApplication rec {
@@ -18,10 +14,6 @@ buildGoApplication rec {
   ];
 
   buildInputs = [
-    gtk3
-    libappindicator-gtk3
-    libayatana-appindicator
-    webkitgtk
     pcre
   ];
 
