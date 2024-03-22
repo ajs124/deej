@@ -13,3 +13,5 @@ releases/
 logs/
 preferences.yaml
 .direnv
+result
+cmd
