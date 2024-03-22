@@ -5,10 +5,11 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"regexp"
 	"strconv"
 	"strings"
 	"time"
+
+	regexp "github.com/GRbit/go-pcre"
 
 	"github.com/jacobsa/go-serial/serial"
 	"go.uber.org/zap"
@@ -41,7 +42,7 @@ type SliderMoveEvent struct {
 	PercentValue float32
 }
 
-var expectedLinePattern = regexp.MustCompile(`^\d{1,4}(\|\d{1,4})*\r\n$`)
+var expectedLinePattern = regexp.MustCompileJIT(`^\d{1,4}(\|\d{1,4})*\r\n$`, regexp.MULTILINE, regexp.STUDY_JIT_COMPILE)
 
 // NewSerialIO creates a SerialIO instance that uses the provided deej
 // instance's connection info to establish communications with the arduino chip
@@ -231,7 +232,7 @@ func (sio *SerialIO) handleLine(logger *zap.SugaredLogger, line string) {
 	// this function receives an unsanitized line which is guaranteed to end with LF,
 	// but most lines will end with CRLF. it may also have garbage instead of
 	// deej-formatted values, so we must check for that! just ignore bad ones
-	if !expectedLinePattern.MatchString(line) {
+	if !expectedLinePattern.MatchStringWFlags(line, 0) {
 		return
 	}
 

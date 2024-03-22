@@ -3,7 +3,8 @@
 , gtk3
 , libappindicator-gtk3
 , libayatana-appindicator
-, webkitgtk }:
+, webkitgtk
+, pcre }:
 
 buildGoApplication rec {
   pname = "deej";
@@ -21,6 +22,7 @@ buildGoApplication rec {
     libappindicator-gtk3
     libayatana-appindicator
     webkitgtk
+    pcre
   ];
 
   subPackages = [ "pkg/deej/cmd" ];

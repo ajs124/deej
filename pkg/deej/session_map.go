@@ -2,10 +2,11 @@ package deej
 
 import (
 	"fmt"
-	"regexp"
 	"strings"
 	"sync"
 	"time"
+
+	regexp "github.com/GRbit/go-pcre"
 
 	"github.com/omriharel/deej/pkg/deej/util"
 	"github.com/thoas/go-funk"
@@ -55,7 +56,7 @@ const (
 )
 
 // this matches friendly device names (on Windows), e.g. "Headphones (Realtek Audio)"
-var deviceSessionKeyPattern = regexp.MustCompile(`^.+ \(.+\)$`)
+var deviceSessionKeyPattern = regexp.MustCompileJIT(`^.+ \(.+\)$`, regexp.MULTILINE, regexp.STUDY_JIT_COMPILE)
 
 func newSessionMap(deej *Deej, logger *zap.SugaredLogger, sessionFinder SessionFinder) (*sessionMap, error) {
 	logger = logger.Named("sessions")
@@ -178,7 +179,7 @@ func (m *sessionMap) sessionMapped(session Session) bool {
 	}
 
 	// count device sessions as mapped
-	if deviceSessionKeyPattern.MatchString(session.Key()) {
+	if deviceSessionKeyPattern.MatchStringWFlags(session.Key(), 0) {
 		return true
 	}
 

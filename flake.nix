@@ -38,6 +38,7 @@
             libappindicator-gtk3
             libayatana-appindicator
             webkitgtk
+            pcre
           ];
         };
       };

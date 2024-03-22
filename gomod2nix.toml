@@ -1,6 +1,9 @@
 schema = 3
 
 [mod]
+  [mod."github.com/GRbit/go-pcre"]
+    version = "v1.0.1"
+    hash = "sha256-oyuGwiWlmrFqD/05kp415LgA2jeBTCg4YWWkcPvauFk="
   [mod."github.com/fsnotify/fsnotify"]
     version = "v1.7.0"
     hash = "sha256-MdT2rQyQHspPJcx6n9ozkLbsktIOJutOqDuKpNAtoZY="
@@ -101,8 +104,8 @@ schema = 3
     version = "v1.9.5"
     hash = "sha256-RJ9K1BTId0Mled7S66iGgxHkZ5JKEIsrrNaEfM8aImc="
   [mod."github.com/pelletier/go-toml/v2"]
-    version = "v2.1.1"
-    hash = "sha256-BQtflYQ8Dt7FL/yFI9OnxwvsRk0oEO37ZXuGXFveVpo="
+    version = "v2.2.0"
+    hash = "sha256-hbjvVGN0puPwpMq2bDlixeuUj8+we3BOgwZuY7/SM+Y="
   [mod."github.com/sagikazarmark/locafero"]
     version = "v0.4.0"
     hash = "sha256-7I1Oatc7GAaHgAqBFO6Tv4IbzFiYeU9bJAfJhXuWaXk="
@@ -155,8 +158,8 @@ schema = 3
     version = "v1.27.0"
     hash = "sha256-8655KDrulc4Das3VRduO9MjCn8ZYD5WkULjCvruaYsU="
   [mod."golang.org/x/exp"]
-    version = "v0.0.0-20240222234643-814bf88cf225"
-    hash = "sha256-DM6/KUjyqyuqXai7UH1vMsoKXQAlYfcHTwK1dHqjRAc="
+    version = "v0.0.0-20240318143956-a85f2c67cd81"
+    hash = "sha256-HjEmpjgXqIuGc5rsTVkg6OPAN2fGhfkska7cwRu1qaw="
   [mod."golang.org/x/sys"]
     version = "v0.18.0"
     hash = "sha256-bIFhfFp7Sj0E1gcE3X3l/jecCfSRLgrkb8f0Yr6tVR0="
