@@ -31,6 +31,7 @@
           nativeBuildInputs = with pkgs; [
             go
             pkg-config
+            graphviz
           ];
           buildInputs = with pkgs; [
             gtk3
