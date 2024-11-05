@@ -32,6 +32,7 @@
             go
             pkg-config
             graphviz
+            gomod2nix.packages.${system}.default
           ];
           buildInputs = with pkgs; [
             pcre

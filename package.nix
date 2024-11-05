@@ -7,8 +7,7 @@ buildGoApplication rec {
   pname = "deej";
   version = "0.10.0";
   src = ./.;
-
-  modules = ./gomod2nix.toml;
+  pwd = ./.;
 
   nativeBuildInputs = [
     pkg-config
