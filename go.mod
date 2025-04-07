@@ -1,6 +1,7 @@
 module github.com/omriharel/deej
 
 go 1.23
+toolchain go1.24.1
 
 require (
 	fyne.io/systray v1.11.0
@@ -12,7 +13,6 @@ require (
 	github.com/jfreymuth/pulse v0.1.1
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e
 	github.com/mitchellh/go-ps v1.0.0
-	github.com/moutend/go-wca v0.1.2-0.20190422112502-0fa027b3d89a
 	github.com/spf13/viper v1.20.1
 	github.com/thoas/go-funk v0.9.3
 	go.uber.org/zap v1.27.0
