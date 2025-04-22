@@ -1,4 +1,5 @@
 { buildGoApplication
+, go_1_23
 , pkg-config
 , pcre
 , buildType ? "release" }:
@@ -8,6 +9,8 @@ buildGoApplication rec {
   version = "0.10.0";
   src = ./.;
   pwd = ./.;
+
+  go = go_1_23;
 
   nativeBuildInputs = [
     pkg-config
