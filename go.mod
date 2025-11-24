@@ -15,7 +15,7 @@ require (
 	github.com/moutend/go-wca v0.1.2-0.20190422112502-0fa027b3d89a
 	github.com/spf13/viper v1.21.0
 	github.com/thoas/go-funk v0.9.3
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 )
 
 require (
