@@ -6,7 +6,7 @@ require (
 	fyne.io/systray v1.11.0
 	github.com/GRbit/go-pcre v1.0.1
 	github.com/fsnotify/fsnotify v1.9.0
-	github.com/gen2brain/beeep v0.11.1
+	github.com/gen2brain/beeep v0.11.2
 	github.com/go-ole/go-ole v1.3.0
 	github.com/jacobsa/go-serial v0.0.0-20180131005756-15cf729a72d4
 	github.com/jfreymuth/pulse v0.1.1
