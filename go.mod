@@ -3,7 +3,7 @@ module github.com/omriharel/deej
 go 1.25.0
 
 require (
-	fyne.io/systray v1.11.0
+	fyne.io/systray v1.12.0
 	github.com/GRbit/go-pcre v1.0.1
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/gen2brain/beeep v0.11.1
